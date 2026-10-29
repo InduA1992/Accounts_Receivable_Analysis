@@ -73,7 +73,6 @@ Fields planned for initial investigation include:
 - **Matplotlib / Seaborn** – Data visualization, if used in the notebook
 - **Jupyter Notebook** – Analysis and documentation
 - **GitHub** – Version control and project presentation
-- **Power BI or Excel** – Optional reporting and dashboard development, if included in the final project
 
 ## Project Workflow
 
