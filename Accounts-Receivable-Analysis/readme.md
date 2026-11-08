@@ -1,6 +1,6 @@
 📊 Accounts Receivable Analysis – Phase 2
 
-🧹 Data Cleaning, Preprocessing | Python
+🧹 Data Cleaning, Preprocessing & Feature Engineering | Python
 
 📌 Project Overview
 
@@ -201,6 +201,25 @@ Accounts_Receivable_Analysis/
 ├── Account receivable analysis data set.csv
 ├── Accounts_Receivable_Analysis_Phase2.ipynb
 └── README.md
+
+🚀 Next Phase – Exploratory Data Analysis (EDA)
+
+The cleaned and transformed dataset will be used for further analysis, including:
+
+Customer payment behaviour analysis.
+
+Payment delay trends and patterns.
+
+Invoice amount and payment term analysis.
+
+Customer-wise payment performance.
+
+Visualizations and business insights.
+
+Identification of customers with frequent payment delays.
+
+✅ Conclusion
+
 Phase 2 successfully prepared the Accounts Receivable dataset for further analysis. Data quality checks confirmed that the dataset contained no missing or duplicate records, and all date columns were converted successfully.
 
 Additional features were created to identify payment behaviour, calculate payment cycles, and support time-based analysis.
