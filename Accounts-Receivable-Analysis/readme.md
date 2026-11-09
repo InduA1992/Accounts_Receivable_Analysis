@@ -28,11 +28,17 @@ Converted the following columns into datetime format:
 
 5. Feature Engineering
 Created five new analytical columns:
-New column	Purpose
+
+New column	         Purpose
+
 payment_status:-	Categorised payments as Early, On-Time or Late
+
 payment_cycle_days:-	Calculated days between document date and clearing date
+
 clearing_year:-	Extracted clearing year
+
 clearing_month:-	Extracted clearing month
+
 clearing_quarter:-	Extracted clearing quarter
 
 6. Customer Payment Analysis
