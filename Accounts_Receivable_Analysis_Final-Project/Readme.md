@@ -9,6 +9,7 @@ Historical Invoice Payment Behaviour, Payment Delays & Customer Insights
   <img src="https://img.shields.io/badge/Jupyter-Notebook-F37626?logo=jupyter&logoColor=white" alt="Jupyter">
 </p>A Python-based data analytics project exploring invoice settlement patterns, payment delays, payment methods and customer-level receivables behaviour.
 </div>📌 Project Overview
+
 Accounts Receivable (AR) is an important part of financial operations because delayed customer payments can affect cash-flow visibility, working capital and collection efficiency.
 
 This project analyses historical invoice-level records to understand how customers settle invoices, how payment delays vary, and whether payment terms and payment methods are associated with settlement behaviour.
@@ -16,6 +17,7 @@ This project analyses historical invoice-level records to understand how custome
 Using Python and its data analysis libraries, the project follows a structured workflow covering data understanding, data quality assessment, preprocessing, feature engineering, exploratory data analysis (EDA), customer-level analysis and business recommendations.
 
 The objective is to transform raw invoice data into meaningful insights that can support better Accounts Receivable monitoring and collection prioritisation.
+
 Project focus: Historical payment behaviour analysis. This project does not calculate a live open-receivables balance or current overdue ageing because the available notebook results do not establish current open invoice balances.
 
 🎯 Project Objectives
@@ -31,15 +33,13 @@ Project focus: Historical payment behaviour analysis. This project does not calc
 - Present findings through visualisations and actionable recommendations.
 
 📂 Dataset Information
-Dataset Detail	Description
-Dataset name	Accounts Receivable and Payment Delay Analysis
+
 Source	Kaggle – Accounts Receivable and Payment Delay Analysis
 File format	CSV
 Invoice records analysed	45,839
 Customer summary	69 unique customers
 Initial columns	29
 Main subject	Customer invoices, payment terms, payment methods, due dates and clearing activity
-
 
 Key Dataset Attributes
 Column	Description
@@ -67,7 +67,6 @@ Matplotlib	Static data visualisation
 Seaborn	Statistical visualisation
 Plotly Express	Interactive exploratory charts
 
-
 🔍 Project Workflow
 The project follows a step-by-step data analytics process.
 1. Data Understanding
@@ -89,7 +88,7 @@ The project follows a step-by-step data analytics process.
 - Trimmed unnecessary spaces from text columns.
 - Reviewed missing values and duplicate records.
 - Checked numerical fields and descriptive statistics.
-Notebook validation: The exact duplicate-row check reported zero duplicate rows. Missing-value and date-conversion checks are included in the notebook workflow and should be reviewed again when reproducing the analysis with the raw source file.
+
 4. Feature Engineering
 Created additional fields to support payment analysis.
 Feature	Definition
@@ -99,8 +98,8 @@ clearing_year	Year extracted from clearing date
 clearing_month	Month extracted from clearing date
 clearing_quarter	Quarter extracted from clearing date
 
-
 Payment status logic:
+
 df_clean["payment_status"] = np.where(
     df_clean["days_overdue_delay"] < 0,
     "Early Payment",
@@ -110,13 +109,14 @@ df_clean["payment_status"] = np.where(
         "Late Payment"
     )
 )
+
 Payment cycle calculation:
 df_clean["payment_cycle_days"] = (
     df_clean["clearing_date"] - df_clean["doc_date"]
 ).dt.days
+
 5. Customer-Level Analysis
 Grouped invoice records by customer number to create a customer payment summary.
-
 The customer-level analysis includes:
 - Total invoice count
 - Total recorded invoice amount
@@ -126,10 +126,12 @@ The customer-level analysis includes:
 - On-time payment count
 - Late payment count
 - Late-payment rate
+
 Late-payment rate formula:
 late_payment_rate = (
     late_payments / total_invoices
 ) * 100
+
 6. Exploratory Data Analysis (EDA)
 The analysis is organised into three approaches:
 - Univariate Analysis – examines individual variables and their distributions.
@@ -172,6 +174,7 @@ Key observation: Third Part Payments and No Payment Method have the highest repo
 Correlation analysis explores the direction and strength of relationships between selected financial variables.
 
 Key observation: Payment terms and payment cycle days show a strong positive correlation of approximately 0.891. Invoice amount and payment delay show a very weak correlation of approximately 0.044.
+
 Additional Analyses in the Jupyter Notebook
 The notebook also includes interactive visualisations such as:
 - Invoice amount distribution.
@@ -190,17 +193,20 @@ The notebook also includes interactive visualisations such as:
 - 15,743 records (34.34%) are classified as early payments.
 - 5,797 records (12.65%) are classified as on-time payments.
 This indicates that late payment is the largest category in the historical records.
+
 2. Invoice Amounts Are Positively Skewed
 - Average invoice amount: approximately 17,807.16.
 - Median invoice amount: 3,196.
 - Maximum recorded invoice amount: 5,709,354.
 The difference between the mean and median indicates that high-value records influence the average. Median and percentile measures should therefore be considered alongside the mean.
+
 3. Payment Delays Include Extreme Values
 - Average payment delay: approximately 0.97 days.
 - Median payment delay: 1 day.
 - Minimum recorded delay: −117 days.
 - Maximum recorded delay: 1,257 days.
 Negative delay values represent early settlement under the notebook's classification rule. Some historical records show exceptionally long delays.
+
 4. Payment Method Performance Varies
 Payment Method	Late-Payment Rate
 Third Part Payments	77.55%
@@ -211,14 +217,17 @@ Regulatory 2	25.17%
 Regulatory	7.00%
 
 Third Part Payments has the highest reported late-payment rate. Payment method alone should not be treated as the cause of late payment.
+
 5. Payment Terms and Payment Cycle
 The correlation between payment terms and payment cycle days is approximately 0.891, indicating a strong positive association.
 
 This suggests that invoices with longer payment terms generally tend to have longer payment cycles in the analysed records. Correlation does not prove causation.
+
 6. Invoice Amount and Payment Delay
 The correlation between invoice amount and payment delay is approximately 0.044, indicating a very weak positive linear relationship.
 
 Invoice value alone is therefore not a strong indicator of historical payment delay in this dataset.
+
 7. Customer Payment Behaviour
 The customer summary includes 69 unique customers.
 - Customer 5039221094 has the highest total recorded invoice amount: approximately 227,964,488 across 9,712 invoices.
@@ -254,6 +263,7 @@ The customer summary includes 69 unique customers.
 - Explore predictive analysis after validating data definitions and collecting suitable historical outcomes.
 
 📁 Suggested GitHub Repository Structure
+
 Accounts-Receivable-Analysis/
 │
 ├── README.md
