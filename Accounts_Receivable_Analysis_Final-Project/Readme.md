@@ -135,6 +135,7 @@ The analysis is organised into three approaches:
 - Univariate Analysis – examines individual variables and their distributions.
 - Bivariate Analysis – explores relationships between two variables.
 - Multivariate Analysis – examines combined relationships among multiple financial and customer variables.
+
 📈 Key Performance Indicators
 The following metrics are reported in the notebook:
 KPI	Result
@@ -154,8 +155,6 @@ Median payment cycle	6 days
 Average invoice amount	17,807.16
 Median invoice amount	3,196
 
-
-<sub>Amounts are displayed without a currency symbol. These are historical dataset metrics, not current outstanding receivables.</sub>
 📊 Data Visualizations & Analysis
 1. Payment Status Distribution
 The payment status analysis compares early, on-time and late invoice records.
@@ -184,6 +183,7 @@ The notebook also includes interactive visualisations such as:
 - Payment status composition by payment method.
 - Customer payment behaviour and invoice exposure.
 - Correlation matrix of selected numerical variables.
+
 💡 Key Findings & Business Insights
 1. Late Payment Is the Largest Category
 - 24,299 invoice records (53.01%) are classified as late.
@@ -210,7 +210,6 @@ Direct Debits 1	46.42%
 Regulatory 2	25.17%
 Regulatory	7.00%
 
-
 Third Part Payments has the highest reported late-payment rate. Payment method alone should not be treated as the cause of late payment.
 5. Payment Terms and Payment Cycle
 The correlation between payment terms and payment cycle days is approximately 0.891, indicating a strong positive association.
@@ -227,7 +226,7 @@ The customer summary includes 69 unique customers.
 - Customer 5039221093 has a late-payment rate of 77.73% and average delay of 3.60 days.
 - Customer 5039221097 has a late-payment rate of 71.11% and average delay of 20.13 days.
 - Customer 5039221071 has an average delay of −23.58 days, indicating early-payment behaviour on average.
-Customer IDs are reproduced from the notebook. Mask or remove them before public sharing if they could identify real customers.
+
 🎯 Recommendations
 1. Prioritise further review of customers with both high invoice exposure and high late-payment rates.
 2. Investigate customers with unusually high average or maximum payment delays.
@@ -235,6 +234,7 @@ Customer IDs are reproduced from the notebook. Mask or remove them before public
 4. Examine payment methods with higher historical late-payment rates, while considering the number of invoices in each category.
 5. Use median and percentile measures alongside averages to account for extreme invoice amounts and delays.
 6. Build a separate open-invoice ageing report for current collection monitoring.
+
 ⚠️ Limitations & Assumptions
 - The analysis is based on historical invoice/payment records and does not establish current open invoice balances.
 - A current outstanding receivables balance and current overdue ageing cannot be calculated from the reported notebook results alone.
@@ -244,6 +244,7 @@ Customer IDs are reproduced from the notebook. Mask or remove them before public
 - Payment-method categories with fewer records may have less stable rates.
 - Customer identifiers should be anonymised if necessary before public publication.
 - This is a descriptive analysis, not a predictive credit-risk model or collection forecast.
+
 🚀 Future Scope
 - Include invoice open/cleared status and outstanding balances as at a defined reporting date.
 - Calculate overdue days for open invoices only.
@@ -251,6 +252,7 @@ Customer IDs are reproduced from the notebook. Mask or remove them before public
 - Include collection owner, dispute status, promised payment date and last follow-up date where available.
 - Develop a Power BI dashboard with total outstanding, overdue amount, overdue percentage, top overdue customers and ageing trends.
 - Explore predictive analysis after validating data definitions and collecting suitable historical outcomes.
+
 📁 Suggested GitHub Repository Structure
 Accounts-Receivable-Analysis/
 │
@@ -276,20 +278,8 @@ Accounts-Receivable-Analysis/
 │   └── Accounts_Receivable_Analysis_Project_Report.docx
 │
 └── requirements.txt
-This is a suggested repository structure. Place your actual notebook, data and report in the corresponding folders before publishing. Do not upload confidential or restricted data.
-⚙️ Installation & Setup
-1. Clone the Repository
-git clone https://github.com/your-username/Accounts-Receivable-Analysis.git
-cd Accounts-Receivable-Analysis
-2. Install Required Libraries
-pip install pandas numpy matplotlib seaborn plotly jupyter
-3. Download the Dataset
-Download the dataset from Kaggle – Accounts Receivable and Payment Delay Analysis and place the CSV file in the location expected by the notebook.
-4. Launch Jupyter Notebook
-jupyter notebook
-Open Accounts_Receivable_Analysis.ipynb and run the cells in sequence. If your dataset is stored in a different folder, update the CSV file path in the notebook.
+
 📦 Project Outputs
-The notebook saves the following processed files:
 Output File	Description
 Accounts_Receivable_Cleaned.csv	Cleaned invoice-level data with engineered payment features
 Customer_Payment_Analysis.csv	Customer-level invoice and payment behaviour summary
@@ -301,6 +291,7 @@ This project analyses 45,839 historical invoice records across 69 customers to u
 The findings show that 53.01% of invoice records are classified as late payments. Payment terms have a strong positive association with payment cycle days, while invoice amount alone has a very weak relationship with payment delay. Payment behaviour also varies across payment methods and customers.
 
 The project demonstrates how Python-based data cleaning, feature engineering, exploratory data analysis and visualisation can turn invoice data into meaningful Accounts Receivable insights. Adding current open balances and invoice ageing would be the next step toward a practical collection-monitoring solution.
+
 <div align="center">✨ Better Data. Clearer Insights. Smarter Receivables Decisions.
 Accounts Receivable Analysis | Python Data Analytics Project
 </div>
