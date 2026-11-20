@@ -36,27 +36,46 @@ Project focus:
 
 📂 Dataset Information
 
-Source	Kaggle –
+Source	Kaggle –https://www.kaggle.com/datasets/sonalisingh1411/accounts-receivable-and-payment-delay-analysis?select=Dataset.csv
+
 File format	CSV
+
 Invoice records analysed	45,839
+
 Customer summary	69 unique customers
+
 Initial columns	29
+
 Main subject	Customer invoices, payment terms, payment methods, due dates and clearing activity
 
 Key Dataset Attributes
+
 Column	Description
+
 cust_num	Customer number
+
 document_no	Invoice/document reference
+
 amount	Recorded invoice amount
+
 payment_method_description	Description of payment method
+
 payment_term	Recorded payment term
+
 days_overdue_delay	Recorded payment delay
+
 doc_date	Document/invoice date
+
 net_due_date	Net due date
+
 posting_date	Posting date
+
 clearing_date	Invoice clearing date
+
 region, city	Customer location attributes
+
 customer_name	Customer name
+
 no_of_orders_by_customer	Number of orders recorded for the customer
 
 🛠️ Tools & Technologies
@@ -70,19 +89,23 @@ Seaborn	Statistical visualisation
 Plotly Express	Interactive exploratory charts
 
 🔍 Project Workflow
+
 The project follows a step-by-step data analytics process.
+
 1. Data Understanding
 - Imported the required Python libraries.
 - Loaded the CSV file into a Pandas DataFrame.
 - Examined sample records and dataset dimensions.
 - Reviewed column names, data types and unique values.
 - Used descriptive statistics to understand numerical attributes.
+
 2. Data Quality Assessment
 - Checked missing values and null percentages.
 - Checked blank values in text columns.
 - Identified exact duplicate records.
 - Reviewed data types and date fields.
 - Inspected unusual values and extreme observations.
+
 3. Data Cleaning & Preprocessing
 - Created a separate working copy of the original dataset.
 - Standardised column names using lowercase and underscore formatting.
