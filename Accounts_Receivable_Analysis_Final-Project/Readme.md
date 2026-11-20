@@ -1,5 +1,6 @@
 <div align="center"><img src="images/ar_project_banner.png" alt="Accounts Receivable Analysis banner" width="100%">📊 Accounts Receivable Analysis
-Historical Invoice Payment Behaviour, Payment Delays & Customer Insights
+
+  Historical Invoice Payment Behaviour, Payment Delays & Customer Insights
 
   👤 Author: Indu A  
 
@@ -23,17 +24,22 @@ This project analyses historical invoice-level records to understand how custome
 Using Python and its data analysis libraries, the project follows a structured workflow covering data understanding, data quality assessment, preprocessing, feature engineering, exploratory data analysis (EDA), customer-level analysis and business recommendations.
 
 The objective is to transform raw invoice data into meaningful insights that can support better Accounts Receivable monitoring and collection prioritisation.
+
 Business Problem
+
 Receivables teams need a structured way to understand where payment delays occur and how recorded payment behaviour varies across customers, payment terms, invoice amounts, payment methods and regions. Without a consistent analytical view, it can be difficult to identify recurring patterns, decide which accounts warrant further review and communicate collection trends clearly.
 
 Central business question: What patterns in invoice amounts, payment terms, customer and regional information, and recorded payment delays can help explain historical settlement behaviour and support more focused receivables follow-up?
 
 The analysis identifies patterns for further review. It does not assume that an observed relationship proves the cause of a payment delay.
+
 Analytical Scope and Interpretation
+
 This project uses the fields available in the dataset and validates their meaning before drawing conclusions. In particular, Amount is treated as a recorded document amount; it is not automatically interpreted as an outstanding balance. Currency, amount units, payment-delay definitions, clearing status and the unit of observation must be confirmed against the source documentation and the data itself.
 Project focus: This is a historical invoice-payment behaviour analysis. The available results do not establish live open invoice balances or current overdue ageing. A separate open-item dataset with balances and a defined reporting date would be required for operational ageing and collection monitoring.
 
 🎯 Project Objectives
+
 - Inspect the structure, completeness and quality of the Accounts Receivable dataset.
 - Validate the unit of observation and the definitions of amount, payment terms, delay fields, clearing status and date fields.
 - Identify missing values, blank text values, exact duplicates, inconsistent categories and implausible records.
@@ -44,10 +50,10 @@ Project focus: This is a historical invoice-payment behaviour analysis. The avai
 - Compare customer and regional patterns where record counts and field definitions support meaningful comparisons.
 - Examine invoice, due, posting and clearing dates, including weekday and quarterly patterns where valid.
 - Present evidence-based findings, visualisations, limitations and practical recommendations for further receivables review.
+
 📂 Dataset Information
-Dataset Detail	Description
-Dataset name	Accounts Receivable and Payment Delay Analysis
-Source	Kaggle – Accounts Receivable and Payment Delay Analysis
+
+Source	Kaggle – 
 File format	CSV
 Invoice records analysed	45,839
 Customer summary	69 unique customers
@@ -300,8 +306,6 @@ The customer summary includes 69 unique customers.
 * Customer `5039221097` has a late-payment rate of 71.11% and average delay of 20.13 days.
 * Customer `5039221071` has an average delay of −23.58 days, indicating early-payment behaviour on average.
 
-*Customer IDs are reproduced from the notebook. Mask or remove them before public sharing if they could identify real customers.*
-
 ## 🎯 Recommendations
 
 1. Prioritise further review of customers with both high invoice exposure and high late-payment rates.
@@ -358,6 +362,7 @@ Accounts-Receivable-Analysis/
 │   └── Accounts_Receivable_Analysis_Project_Report.docx
 │
 └── requirements.txt
+
 📦 Project Outputs
 Processed files:
 Output File	Description
