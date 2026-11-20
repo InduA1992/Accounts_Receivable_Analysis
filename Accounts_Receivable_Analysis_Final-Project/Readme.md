@@ -83,13 +83,19 @@ no_of_orders_by_customer	Number of orders recorded for the customer
 
 Tool / Library	Purpose
 
-Python	Main programming language
-Jupyter Notebook	Interactive analysis environment
-Pandas	Data loading, cleaning, grouping and aggregation
-NumPy	Numerical operations and feature engineering
-Matplotlib	Static data visualisation
-Seaborn	Statistical visualisation
-Plotly Express	Interactive exploratory charts
+Python:	Main programming language
+
+Jupyter Notebook:Interactive analysis environment
+
+Pandas:	Data loading, cleaning, grouping and aggregation
+
+NumPy:	Numerical operations and feature engineering
+
+Matplotlib:	Static data visualisation
+
+Seaborn:	Statistical visualisation
+
+Plotly Express:	Interactive exploratory charts
 
 🔍 Project Workflow
 
@@ -122,11 +128,18 @@ The project follows a step-by-step data analytics process.
 Created additional fields to support payment analysis.
 
 Feature	Definition
-payment_status	Early Payment when delay < 0; On-Time Payment when delay = 0; Late Payment when delay > 0
-payment_cycle_days	Clearing date minus document date, in days
-clearing_year	Year extracted from clearing date
-clearing_month	Month extracted from clearing date
-clearing_quarter	Quarter extracted from clearing date
+
+payment_status	
+
+Early Payment when delay < 0; On-Time Payment when delay = 0; Late Payment when delay > 0
+
+payment_cycle_days:	Clearing date minus document date, in days
+
+clearing_year	Year: extracted from clearing date
+
+clearing_month: Month extracted from clearing date
+
+clearing_quarter: Quarter extracted from clearing date
 
 Payment status logic:
 
@@ -141,6 +154,7 @@ df_clean["payment_status"] = np.where(
 )
 
 Payment cycle calculation:
+
 df_clean["payment_cycle_days"] = (
     df_clean["clearing_date"] - df_clean["doc_date"]
 ).dt.days
@@ -168,6 +182,7 @@ late_payment_rate = (
 6. Exploratory Data Analysis (EDA)
 
 The analysis is organised into three approaches:
+
 - Univariate Analysis – examines individual variables and their distributions.
 - Bivariate Analysis – explores relationships between two variables.
 - Multivariate Analysis – examines combined relationships among multiple financial and customer variables.
@@ -320,7 +335,6 @@ The customer summary includes 69 unique customers.
 📁 Suggested GitHub Repository Structure
 
 Accounts-Receivable-Analysis/
-
 │
 ├── README.md
 ├── images/
