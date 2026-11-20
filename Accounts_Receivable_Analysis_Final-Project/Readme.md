@@ -8,15 +8,15 @@ Historical Invoice Payment Behaviour, Payment Delays & Customer Insights
   <img src="https://img.shields.io/badge/Seaborn-Statistical%20Charts-4C72B0" alt="Seaborn">
   <img src="https://img.shields.io/badge/Jupyter-Notebook-F37626?logo=jupyter&logoColor=white" alt="Jupyter">
 </p>A Python-based data analytics project exploring invoice settlement patterns, payment delays, payment methods and customer-level receivables behaviour.
+
 </div>📌 Project Overview
 
-Accounts Receivable (AR) is an important part of financial operations because delayed customer payments can affect cash-flow visibility, working capital and collection efficiency.
-
-This project analyses historical invoice-level records to understand how customers settle invoices, how payment delays vary, and whether payment terms and payment methods are associated with settlement behaviour.
-
-Using Python and its data analysis libraries, the project follows a structured workflow covering data understanding, data quality assessment, preprocessing, feature engineering, exploratory data analysis (EDA), customer-level analysis and business recommendations.
-
-The objective is to transform raw invoice data into meaningful insights that can support better Accounts Receivable monitoring and collection prioritisation.
+  Accounts Receivable (AR) is an important part of financial operations because delayed customer payments can affect cash-flow visibility, working capital and collection efficiency.
+  This project analyses historical invoice-level records to understand how customers settle invoices, how payment delays vary, and whether payment terms and payment methods are associated with settlement       
+  behaviour.Using Python and its data analysis libraries, the project follows a structured workflow covering data understanding, data quality assessment, preprocessing, feature engineering, exploratory data     
+  analysis (EDA), customer-level analysis and business recommendations.
+  
+  The objective is to transform raw invoice data into meaningful insights that can support better Accounts Receivable monitoring and collection prioritisation.
 
 Project focus:
   
@@ -376,6 +376,11 @@ This project analyses 45,839 historical invoice records across 69 customers to u
 The findings show that 53.01% of invoice records are classified as late payments. Payment terms have a strong positive association with payment cycle days, while invoice amount alone has a very weak relationship with payment delay. Payment behaviour also varies across payment methods and customers.
 
 The project demonstrates how Python-based data cleaning, feature engineering, exploratory data analysis and visualisation can turn invoice data into meaningful Accounts Receivable insights. Adding current open balances and invoice ageing would be the next step toward a practical collection-monitoring solution.
+
+👤 Author
+Indu A
+
+📧 LinkedIn: (www.linkedin.com/in/indua24)
 
 <div align="center">✨ Better Data. Clearer Insights. Smarter Receivables Decisions.
 Accounts Receivable Analysis | Python Data Analytics Project
