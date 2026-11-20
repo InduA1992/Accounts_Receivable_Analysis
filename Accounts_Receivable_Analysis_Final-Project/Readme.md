@@ -18,9 +18,11 @@ Using Python and its data analysis libraries, the project follows a structured w
 
 The objective is to transform raw invoice data into meaningful insights that can support better Accounts Receivable monitoring and collection prioritisation.
 
-Project focus: Historical payment behaviour analysis. This project does not calculate a live open-receivables balance or current overdue ageing because the available notebook results do not establish current open invoice balances.
+Project focus:
+  Historical payment behaviour analysis. This project does not calculate a live open-receivables balance or current overdue ageing because the available notebook results do not establish current open invoice balances.
 
 🎯 Project Objectives
+
 - Understand the structure and quality of the invoice dataset.
 - Identify missing values, blank text values and duplicate records.
 - Clean and standardise invoice, customer, payment and date fields.
@@ -34,7 +36,7 @@ Project focus: Historical payment behaviour analysis. This project does not calc
 
 📂 Dataset Information
 
-Source	Kaggle – Accounts Receivable and Payment Delay Analysis
+Source	Kaggle –
 File format	CSV
 Invoice records analysed	45,839
 Customer summary	69 unique customers
