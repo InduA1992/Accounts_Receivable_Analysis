@@ -53,11 +53,16 @@ Project focus: This is a historical invoice-payment behaviour analysis. The avai
 
 📂 Dataset Information
 
-Source	Kaggle – 
+Source	Kaggle – https://www.kaggle.com/datasets/sonalisingh1411/accounts-receivable-and-payment-delay-analysis?select=Dataset.csv
+
 File format	CSV
+
 Invoice records analysed	45,839
+
 Customer summary	69 unique customers
+
 Initial columns	29
+
 Main subject	Customer invoices, payment terms, payment methods, due dates and clearing activity
 
 
