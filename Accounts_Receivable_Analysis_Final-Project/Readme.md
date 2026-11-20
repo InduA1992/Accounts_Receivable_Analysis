@@ -240,15 +240,19 @@ Regulatory	7.00%
 
 
 Third Part Payments has the highest reported late-payment rate. Payment method alone should not be treated as the cause of late payment.
+
 5. Payment Terms and Payment Cycle
 The correlation between payment terms and payment cycle days is approximately 0.891, indicating a strong positive association.
 
 This suggests that invoices with longer payment terms generally tend to have longer payment cycles in the analysed records. Correlation does not prove causation.
+
 6. Invoice Amount and Payment Delay
 The correlation between invoice amount and payment delay is approximately 0.044, indicating a very weak positive linear relationship.
 
 Invoice value alone is therefore not a strong indicator of historical payment delay in this dataset.
+
 7. Customer Payment Behaviour
+
 The customer summary includes 69 unique customers.
 - Customer 5039221094 has the highest total recorded invoice amount: approximately 227,964,488 across 9,712 invoices.
 - Customer 5039221090 has the highest invoice count: 10,219.
@@ -256,6 +260,7 @@ The customer summary includes 69 unique customers.
 - Customer 5039221097 has a late-payment rate of 71.11% and average delay of 20.13 days.
 - Customer 5039221071 has an average delay of −23.58 days, indicating early-payment behaviour on average.
 Customer IDs are reproduced from the notebook. Mask or remove them before public sharing if they could identify real customers.
+
 🎯 Recommendations
 1. Prioritise further review of customers with both high invoice exposure and high late-payment rates.
 2. Investigate customers with unusually high average or maximum payment delays.
@@ -263,6 +268,7 @@ Customer IDs are reproduced from the notebook. Mask or remove them before public
 4. Examine payment methods with higher historical late-payment rates, while considering the number of invoices in each category.
 5. Use median and percentile measures alongside averages to account for extreme invoice amounts and delays.
 6. Build a separate open-invoice ageing report for current collection monitoring.
+
 ⚠️ Limitations & Assumptions
 - The analysis is based on historical invoice/payment records and does not establish current open invoice balances.
 - A current outstanding receivables balance and current overdue ageing cannot be calculated from the reported notebook results alone.
@@ -272,6 +278,7 @@ Customer IDs are reproduced from the notebook. Mask or remove them before public
 - Payment-method categories with fewer records may have less stable rates.
 - Customer identifiers should be anonymised if necessary before public publication.
 - This is a descriptive analysis, not a predictive credit-risk model or collection forecast.
+
 🚀 Future Scope
 - Include invoice open/cleared status and outstanding balances as at a defined reporting date.
 - Calculate overdue days for open invoices only.
@@ -279,6 +286,7 @@ Customer IDs are reproduced from the notebook. Mask or remove them before public
 - Include collection owner, dispute status, promised payment date and last follow-up date where available.
 - Develop a Power BI dashboard with total outstanding, overdue amount, overdue percentage, top overdue customers and ageing trends.
 - Explore predictive analysis after validating data definitions and collecting suitable historical outcomes.
+
 📁 Suggested GitHub Repository Structure
 Accounts-Receivable-Analysis/
 │
@@ -304,36 +312,26 @@ Accounts-Receivable-Analysis/
 │   └── Accounts_Receivable_Analysis_Project_Report.docx
 │
 └── requirements.txt
-This is a suggested repository structure. Place your actual notebook, data and report in the corresponding folders before publishing. Do not upload confidential or restricted data.
-⚙️ Installation & Setup
-1. Clone the Repository
-git clone https://github.com/your-username/Accounts-Receivable-Analysis.git
-cd Accounts-Receivable-Analysis
-2. Install Required Libraries
-pip install pandas numpy matplotlib seaborn plotly jupyter
-3. Download the Dataset
-Download the dataset from Kaggle – Accounts Receivable and Payment Delay Analysis and place the CSV file in the location expected by the notebook.
-4. Launch Jupyter Notebook
-jupyter notebook
-Open Accounts_Receivable_Analysis.ipynb and run the cells in sequence. If your dataset is stored in a different folder, update the CSV file path in the notebook.
+
 📦 Project Outputs
-The notebook saves the following processed files:
-Output File	Description
+
 Accounts_Receivable_Cleaned.csv	Cleaned invoice-level data with engineered payment features
 Customer_Payment_Analysis.csv	Customer-level invoice and payment behaviour summary
 
 
 🧭 Project Status and Development Phases
+
 The project has progressed from proposal and initial dataset inspection into data preparation and exploratory analysis. The README brings these stages together so the repository explains both the business purpose and the analytical work completed to date.
+
 Phase	Focus	Project documentation
 Phase 1 – Project Proposal and Initial Inspection	Business problem, objectives, dataset structure, key fields and validation requirements	Project overview and dataset inspection
 Phase 2 – Data Cleaning and Preparation	Data-quality checks, date conversion, standardisation and payment-related feature engineering	Cleaning and preprocessing workflow
 Phase 3 – Exploratory Data Analysis	Payment-status distribution, delay patterns, payment methods, customer summaries and relationships between variables	KPIs, charts and findings in this README and the analysis notebook
-Next stage	Validate source definitions and extend the work with SQL and a Power BI dashboard where suitable data is available	Future development
-
 
 The analysis findings documented below are historical descriptive results from the notebook. The project should not be presented as a live receivables ageing or collection-forecasting solution unless open balances, reporting dates and the required operational fields are added and validated.
+
 📝 Conclusion
+
 This project analyses 45,839 historical invoice records across 69 customers to understand payment delays, payment cycles, payment methods and customer payment behaviour.
 
 The findings show that 53.01% of invoice records are classified as late payments. Payment terms have a strong positive association with payment cycle days, while invoice amount alone has a very weak relationship with payment delay. Payment behaviour also varies across payment methods and customers.
