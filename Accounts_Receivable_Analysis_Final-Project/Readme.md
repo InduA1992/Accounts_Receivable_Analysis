@@ -337,6 +337,7 @@ The customer summary includes 69 unique customers.
 Accounts-Receivable-Analysis/
 │
 ├── README.md
+│
 ├── images/
 │   ├── ar_project_banner.png
 │   ├── payment_status.png
@@ -350,6 +351,7 @@ Accounts-Receivable-Analysis/
 ├── data/
 │   ├── raw/
 │   │   └── Account receivable analysis data set.csv
+│   │
 │   └── processed/
 │       ├── Accounts_Receivable_Cleaned.csv
 │       └── Customer_Payment_Analysis.csv
