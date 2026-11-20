@@ -19,6 +19,7 @@ Using Python and its data analysis libraries, the project follows a structured w
 The objective is to transform raw invoice data into meaningful insights that can support better Accounts Receivable monitoring and collection prioritisation.
 
 Project focus:
+  
   Historical payment behaviour analysis. This project does not calculate a live open-receivables balance or current overdue ageing because the available notebook results do not establish current open invoice balances.
 
 🎯 Project Objectives
@@ -79,7 +80,9 @@ customer_name	Customer name
 no_of_orders_by_customer	Number of orders recorded for the customer
 
 🛠️ Tools & Technologies
+
 Tool / Library	Purpose
+
 Python	Main programming language
 Jupyter Notebook	Interactive analysis environment
 Pandas	Data loading, cleaning, grouping and aggregation
@@ -115,7 +118,9 @@ The project follows a step-by-step data analytics process.
 - Checked numerical fields and descriptive statistics.
 
 4. Feature Engineering
+
 Created additional fields to support payment analysis.
+
 Feature	Definition
 payment_status	Early Payment when delay < 0; On-Time Payment when delay = 0; Late Payment when delay > 0
 payment_cycle_days	Clearing date minus document date, in days
@@ -141,8 +146,11 @@ df_clean["payment_cycle_days"] = (
 ).dt.days
 
 5. Customer-Level Analysis
+
 Grouped invoice records by customer number to create a customer payment summary.
+
 The customer-level analysis includes:
+
 - Total invoice count
 - Total recorded invoice amount
 - Average payment delay
@@ -158,13 +166,16 @@ late_payment_rate = (
 ) * 100
 
 6. Exploratory Data Analysis (EDA)
+
 The analysis is organised into three approaches:
 - Univariate Analysis – examines individual variables and their distributions.
 - Bivariate Analysis – explores relationships between two variables.
 - Multivariate Analysis – examines combined relationships among multiple financial and customer variables.
 
 📈 Key Performance Indicators
+
 The following metrics are reported in the notebook:
+
 KPI	Result
 Total invoice records	45,839
 Unique customers in customer summary	69
@@ -183,24 +194,32 @@ Average invoice amount	17,807.16
 Median invoice amount	3,196
 
 📊 Data Visualizations & Analysis
+
 1. Payment Status Distribution
+
 The payment status analysis compares early, on-time and late invoice records.
 
 Key observation: Late payments represent 53.01% of the invoice records and form the largest payment-status category.
+
 2. Invoice Volume by Payment Method
 This analysis identifies the payment methods most frequently recorded in the dataset.
 
 Key observation: Direct Debits 2 and Direct Debits 1 account for the majority of invoice records.
+
 3. Late-Payment Rate by Payment Method
+
 The chart compares the historical late-payment percentage across selected payment methods.
 
 Key observation: Third Part Payments and No Payment Method have the highest reported late-payment rates among the listed categories. Lower-volume categories should be interpreted carefully.
+
 4. Correlation Analysis
+
 Correlation analysis explores the direction and strength of relationships between selected financial variables.
 
-Key observation: Payment terms and payment cycle days show a strong positive correlation of approximately 0.891. Invoice amount and payment delay show a very weak correlation of approximately 0.044.
+Key observation:Payment terms and payment cycle days show a strong positive correlation of approximately 0.891. Invoice amount and payment delay show a very weak correlation of approximately 0.044.
 
 Additional Analyses in the Jupyter Notebook
+
 The notebook also includes interactive visualisations such as:
 - Invoice amount distribution.
 - Payment delay distribution.
@@ -213,19 +232,23 @@ The notebook also includes interactive visualisations such as:
 - Correlation matrix of selected numerical variables.
 
 💡 Key Findings & Business Insights
+
 1. Late Payment Is the Largest Category
+
 - 24,299 invoice records (53.01%) are classified as late.
 - 15,743 records (34.34%) are classified as early payments.
 - 5,797 records (12.65%) are classified as on-time payments.
 This indicates that late payment is the largest category in the historical records.
 
 2. Invoice Amounts Are Positively Skewed
+
 - Average invoice amount: approximately 17,807.16.
 - Median invoice amount: 3,196.
 - Maximum recorded invoice amount: 5,709,354.
 The difference between the mean and median indicates that high-value records influence the average. Median and percentile measures should therefore be considered alongside the mean.
 
 3. Payment Delays Include Extreme Values
+
 - Average payment delay: approximately 0.97 days.
 - Median payment delay: 1 day.
 - Minimum recorded delay: −117 days.
@@ -233,6 +256,7 @@ The difference between the mean and median indicates that high-value records inf
 Negative delay values represent early settlement under the notebook's classification rule. Some historical records show exceptionally long delays.
 
 4. Payment Method Performance Varies
+
 Payment Method	Late-Payment Rate
 Third Part Payments	77.55%
 No Payment Method	73.62%
@@ -244,16 +268,19 @@ Regulatory	7.00%
 Third Part Payments has the highest reported late-payment rate. Payment method alone should not be treated as the cause of late payment.
 
 5. Payment Terms and Payment Cycle
+
 The correlation between payment terms and payment cycle days is approximately 0.891, indicating a strong positive association.
 
 This suggests that invoices with longer payment terms generally tend to have longer payment cycles in the analysed records. Correlation does not prove causation.
 
 6. Invoice Amount and Payment Delay
+
 The correlation between invoice amount and payment delay is approximately 0.044, indicating a very weak positive linear relationship.
 
 Invoice value alone is therefore not a strong indicator of historical payment delay in this dataset.
 
 7. Customer Payment Behaviour
+
 The customer summary includes 69 unique customers.
 - Customer 5039221094 has the highest total recorded invoice amount: approximately 227,964,488 across 9,712 invoices.
 - Customer 5039221090 has the highest invoice count: 10,219.
@@ -262,6 +289,7 @@ The customer summary includes 69 unique customers.
 - Customer 5039221071 has an average delay of −23.58 days, indicating early-payment behaviour on average.
 
 🎯 Recommendations
+
 1. Prioritise further review of customers with both high invoice exposure and high late-payment rates.
 2. Investigate customers with unusually high average or maximum payment delays.
 3. Review payment terms against actual payment cycles.
@@ -270,6 +298,7 @@ The customer summary includes 69 unique customers.
 6. Build a separate open-invoice ageing report for current collection monitoring.
 
 ⚠️ Limitations & Assumptions
+
 - The analysis is based on historical invoice/payment records and does not establish current open invoice balances.
 - A current outstanding receivables balance and current overdue ageing cannot be calculated from the reported notebook results alone.
 - The currency and exact unit of the amount field are not confirmed.
@@ -280,6 +309,7 @@ The customer summary includes 69 unique customers.
 - This is a descriptive analysis, not a predictive credit-risk model or collection forecast.
 
 🚀 Future Scope
+
 - Include invoice open/cleared status and outstanding balances as at a defined reporting date.
 - Calculate overdue days for open invoices only.
 - Create ageing buckets: Not Due, 1–30, 31–60, 61–90 and 90+ days.
@@ -290,6 +320,7 @@ The customer summary includes 69 unique customers.
 📁 Suggested GitHub Repository Structure
 
 Accounts-Receivable-Analysis/
+
 │
 ├── README.md
 ├── images/
@@ -315,12 +346,15 @@ Accounts-Receivable-Analysis/
 └── requirements.txt
 
 📦 Project Outputs
+
 Output File	Description
+
 Accounts_Receivable_Cleaned.csv	Cleaned invoice-level data with engineered payment features
 Customer_Payment_Analysis.csv	Customer-level invoice and payment behaviour summary
 
 
 📝 Conclusion
+
 This project analyses 45,839 historical invoice records across 69 customers to understand payment delays, payment cycles, payment methods and customer payment behaviour.
 
 The findings show that 53.01% of invoice records are classified as late payments. Payment terms have a strong positive association with payment cycle days, while invoice amount alone has a very weak relationship with payment delay. Payment behaviour also varies across payment methods and customers.
