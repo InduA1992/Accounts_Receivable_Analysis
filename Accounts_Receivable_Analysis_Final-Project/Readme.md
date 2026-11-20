@@ -1,6 +1,7 @@
 <div align="center"><img src="images/ar_project_banner.png" alt="Accounts Receivable Analysis banner" width="100%">📊 Accounts Receivable Analysis
 Historical Invoice Payment Behaviour, Payment Delays & Customer Insights
-👤 Author: Indu A  
+
+  👤 Author: Indu A  
 
 📧 LinkedIn: www.linkedin.com/in/indua24
 <p>
@@ -12,7 +13,9 @@ Historical Invoice Payment Behaviour, Payment Delays & Customer Insights
   <img src="https://img.shields.io/badge/Jupyter-Notebook-F37626?logo=jupyter&logoColor=white" alt="Jupyter">
 </p>
 A Python-based data analytics project exploring invoice settlement patterns, payment delays, payment methods and customer-level receivables behaviour.
+
 </div>📌 Project Overview
+
 Accounts Receivable (AR) is an important part of financial operations because delayed customer payments can affect cash-flow visibility, working capital and collection efficiency.
 
 This project analyses historical invoice-level records to understand how customers settle invoices, how payment delays vary, and whether payment terms and payment methods are associated with settlement behaviour.
