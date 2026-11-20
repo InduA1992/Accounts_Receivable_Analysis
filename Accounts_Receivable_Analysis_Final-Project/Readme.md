@@ -61,35 +61,54 @@ Initial columns	29
 Main subject	Customer invoices, payment terms, payment methods, due dates and clearing activity
 
 
-Key Dataset Attributes
-Column	Description
-cust_num	Customer number
-document_no	Invoice/document reference
-amount	Recorded invoice amount
-payment_method_description	Description of payment method
-payment_term	Recorded payment term
-days_overdue_delay	Recorded payment delay
-doc_date	Document/invoice date
-net_due_date	Net due date
-posting_date	Posting date
-clearing_date	Invoice clearing date
-region, city	Customer location attributes
-customer_name	Customer name
-no_of_orders_by_customer	Number of orders recorded for the customer
+## 📂 Key Dataset Attributes
+
+| Column Name | Description | Data Type |
+|---|---|---|
+| `Cust_Num` | Unique customer identification number | Identifier |
+| `Customer_Name` | Customer name | Text |
+| `Document_No` | Invoice or document reference number | Identifier |
+| `Amount` | Recorded invoice/document amount | Numeric |
+| `Payment_Method_description` | Description of payment method | Categorical |
+| `Payment_Term` | Recorded payment terms | Numeric / Categorical |
+| `Payment_Term_Bins` | Grouped payment-term categories | Categorical |
+| `Days_Overdue_Delay` | Recorded payment delay in days | Numeric |
+| `Delay_Bins` | Grouped payment-delay categories | Categorical |
+| `Doc_Date` | Invoice/document date | Date |
+| `Net_Due_Date` | Invoice due date | Date |
+| `Posting_Date` | Financial posting date | Date |
+| `Clearing_date` | Invoice clearing date | Date |
+| `Region` | Customer region | Categorical |
+| `City` | Customer city | Categorical |
+| `Amount_Bins` | Grouped invoice amount categories | Categorical |
+| `DelayFlag` | Recorded payment-delay indicator | Categorical / Flag |
+| `Weekday_clearing` | Weekday of invoice clearing | Categorical |
+| `Quarter_clearing` | Quarter of invoice clearing | Categorical |
 
 
-Field Validation Checklist
-Source field	Planned use	Validation required
-Cust_Num, Customer_Name	Customer-level grouping and comparison	Confirm customer identifiers, naming and anonymisation
-Document_No	Document-level reference	Confirm whether each row represents a unique invoice/document or another transaction type
-Amount	Recorded document amount and amount-band analysis	Confirm currency, units, sign conventions and whether it is invoice value or another amount measure
-Payment_Method_description	Payment-method comparisons	Standardise labels and review missing/unknown categories
-Payment_Term, Payment_Term_Bins	Payment-term comparisons	Confirm units, meaning and how bins were derived
-Days_Overdue_Delay, Delay_Bins	Recorded delay analysis	Confirm calculation, sign convention, reference date and category boundaries
-Doc_Date, Net_Due_Date, Posting_Date, Clearing_date	Invoice and settlement timing	Validate date formats, missing values and chronological consistency
-Region, City	Regional comparisons	Confirm whether labels are real, coded or anonymised
-Amount_Bins, DelayFlag	Categorisation and delay indicators	Verify source logic and category definitions rather than assuming their meaning
-Weekday_clearing, Quarter_clearing	Clearing-time analysis	Confirm they are derived from valid clearing dates and use consistent calendar conventions
+## 🔍 Dataset Validation Checklist
+
+| Field / Attribute | Validation Check | Purpose |
+|---|---|---|
+| `Cust_Num` | Check missing values, unique customer IDs and consistency | Ensure accurate customer identification |
+| `Customer_Name` | Check blank values, spelling variations and anonymisation | Maintain customer-name consistency |
+| `Document_No` | Identify duplicate document numbers and repeated records | Verify document-level uniqueness |
+| `Amount` | Check missing values, negative values, outliers and currency | Validate financial amounts |
+| `Payment_Method_description` | Identify missing values and inconsistent category names | Standardise payment methods |
+| `Payment_Term` | Check missing values, data types and unusual values | Validate payment-term information |
+| `Payment_Term_Bins` | Verify category definitions and grouping logic | Ensure correct payment-term classification |
+| `Days_Overdue_Delay` | Check negative values, extreme delays and calculation logic | Validate payment-delay information |
+| `Delay_Bins` | Verify delay categories and boundaries | Ensure consistent delay classification |
+| `Doc_Date` | Check date format and missing values | Validate invoice dates |
+| `Net_Due_Date` | Check date format and chronological consistency | Validate invoice due dates |
+| `Posting_Date` | Check date format and missing values | Validate posting information |
+| `Clearing_date` | Check missing values and date consistency | Validate invoice settlement dates |
+| `Region` | Check missing values and inconsistent labels | Standardise regional information |
+| `City` | Check missing values and spelling variations | Maintain location consistency |
+| `Amount_Bins` | Verify amount ranges and category boundaries | Validate amount classification |
+| `DelayFlag` | Compare flag values with payment-delay logic | Verify payment-delay indicators |
+| `Weekday_clearing` | Compare weekday values with clearing dates | Validate weekday classification |
+| `Quarter_clearing` | Compare quarter values with clearing dates | Validate quarterly classification |
 
 
 🛠️ Tools & Technologies
