@@ -29,6 +29,7 @@ Project focus: Historical payment behaviour analysis. This project does not calc
 - Examine the relationship between payment terms and actual payment cycles.
 - Identify customer-level invoice exposure and late-payment patterns.
 - Present findings through visualisations and actionable recommendations.
+
 📂 Dataset Information
 Dataset Detail	Description
 Dataset name	Accounts Receivable and Payment Delay Analysis
@@ -56,8 +57,6 @@ region, city	Customer location attributes
 customer_name	Customer name
 no_of_orders_by_customer	Number of orders recorded for the customer
 
-
-Note: The currency and exact unit of the amount field are not confirmed in the notebook. Amount values are therefore shown without a currency symbol. Confirm field definitions with the original dataset documentation before using the results operationally.
 🛠️ Tools & Technologies
 Tool / Library	Purpose
 Python	Main programming language
