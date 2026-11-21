@@ -359,7 +359,7 @@ The customer summary includes 69 unique customers.
 * Develop a Power BI dashboard with total outstanding, overdue amount, overdue percentage, top overdue customers and ageing trends.
 * Explore predictive analysis after validating data definitions and collecting suitable historical outcomes.
 
-## 📁 Suggested GitHub Repository Structure
+## 📁 GitHub Repository Structure
 
 ```text
 Accounts-Receivable-Analysis/
