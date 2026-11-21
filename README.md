@@ -242,7 +242,7 @@ The payment status analysis compares early, on-time and late invoice records.
 
 This analysis identifies the payment methods most frequently recorded in the dataset.
 
-![Invoice Volume by Payment Method](images/payment_method.png)
+![Invoice Volume by Payment Method](Accounts_Receivable_Analysis_Final-Project/images/payment_method.png)
 
 **Key observation:** Direct Debits 2 and Direct Debits 1 account for the majority of invoice records.
 
@@ -250,7 +250,7 @@ This analysis identifies the payment methods most frequently recorded in the dat
 
 The chart compares the historical late-payment percentage across selected payment methods.
 
-![Late Payment Rate by Payment Method](images/late_rate.png)
+![Late Payment Rate by Payment Method](Accounts_Receivable_Analysis_Final-Project/images/late_rate.png)
 
 **Key observation:** Third Part Payments and No Payment Method have the highest reported late-payment rates among the listed categories. Lower-volume categories should be interpreted carefully.
 
@@ -258,7 +258,7 @@ The chart compares the historical late-payment percentage across selected paymen
 
 Correlation analysis explores the direction and strength of relationships between selected financial variables.
 
-![Correlation Analysis](images/correlations.png)
+![Correlation Analysis](Accounts_Receivable_Analysis_Final-Project/images/correlations.png)
 
 **Key observation:** Payment terms and payment cycle days show a strong positive correlation of approximately 0.891. Invoice amount and payment delay show a very weak correlation of approximately 0.044.
 
