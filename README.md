@@ -16,9 +16,12 @@
   <img src="https://img.shields.io/badge/Seaborn-Statistical%20Charts-4C72B0" alt="Seaborn">
   <img src="https://img.shields.io/badge/Jupyter-Notebook-F37626?logo=jupyter&logoColor=white" alt="Jupyter">
 </p>
+
 A Python-based data analytics project exploring invoice settlement patterns, payment delays, payment methods and customer-level receivables behaviour.
 
-</div>📌 Project Overview
+</div>
+
+📌 Project Overview
 
 Accounts Receivable (AR) is an important part of financial operations because delayed customer payments can affect cash-flow visibility, working capital and collection efficiency.
 
