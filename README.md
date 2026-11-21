@@ -8,7 +8,7 @@
 
 🔗 **LinkedIn:** [www.linkedin.com/in/indua24](https://www.linkedin.com/in/indua24)
 
-</div>
+<p>
   <img src="https://img.shields.io/badge/Python-3.x-3776AB?logo=python&logoColor=white" alt="Python">
   <img src="https://img.shields.io/badge/Pandas-Data%20Analysis-150458?logo=pandas&logoColor=white" alt="Pandas">
   <img src="https://img.shields.io/badge/NumPy-Numerical%20Computing-013243?logo=numpy&logoColor=white" alt="NumPy">
