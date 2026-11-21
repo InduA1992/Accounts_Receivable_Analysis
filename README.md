@@ -234,7 +234,7 @@ The following metrics are reported in the notebook:
 
 The payment status analysis compares early, on-time and late invoice records.
 
-![Payment Status Distribution](images/payment_status.png)
+![Payment Status Distribution](Accounts_Receivable_Analysis_Final-Project/images/payment_status.png)
 
 **Key observation:** Late payments represent 53.01% of the invoice records and form the largest payment-status category.
 
