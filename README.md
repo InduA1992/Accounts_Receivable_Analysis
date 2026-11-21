@@ -1,11 +1,14 @@
-<div align="center"><img src="images/ar_project_banner.png" alt="Accounts Receivable Analysis banner" width="100%">📊 Accounts Receivable Analysis
+<div align="center">
 
-  Historical Invoice Payment Behaviour, Payment Delays & Customer Insights
+# 📊 Accounts Receivable Analysis
 
-  👤 Author: Indu A  
+### Historical Invoice Payment Behaviour, Payment Delays & Customer Insights
 
-📧 LinkedIn: www.linkedin.com/in/indua24
-<p>
+**👤 Author:** Indu A
+
+🔗 **LinkedIn:** [www.linkedin.com/in/indua24](https://www.linkedin.com/in/indua24)
+
+</div>
   <img src="https://img.shields.io/badge/Python-3.x-3776AB?logo=python&logoColor=white" alt="Python">
   <img src="https://img.shields.io/badge/Pandas-Data%20Analysis-150458?logo=pandas&logoColor=white" alt="Pandas">
   <img src="https://img.shields.io/badge/NumPy-Numerical%20Computing-013243?logo=numpy&logoColor=white" alt="NumPy">
